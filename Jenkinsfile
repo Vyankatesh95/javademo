@@ -12,11 +12,11 @@ pipeline{
                 steps{
                     sh "mvn package"
                 }
-            }
-           post {
+            }  
+        }
+        post {
                 always{
             cleanWs()
                 }
             }
-        }
 }
