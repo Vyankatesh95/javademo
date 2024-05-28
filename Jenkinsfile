@@ -13,8 +13,8 @@ pipeline{
                     sh "mvn package"
                 }
             }
-            stage("clean up workspace"){
-                steps{
+           post {
+                always{
             cleanWs()
                 }
             }
