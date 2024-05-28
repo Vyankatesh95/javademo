@@ -8,7 +8,7 @@ pipeline{
         stages {
             stage("checkout the code"){
                 steps{
-                    checkout scmGit(branches: [[name: '$repo_name']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Vyankatesh95/javademo.git']])
+                    git branch: "$repo_name", url: 'https://github.com/Vyankatesh95/javademo.git'
                 }
             }
              stage("build the code"){
